@@ -6,8 +6,8 @@ con = cx_Oracle.connect('USER', 'PWD', 'BDD')
 cur = con.cursor()
 cur.execute("select * from v$version")
 for row in cur:
-	print(row)
-
+	print(row[0])
 
 cur.close()
+#con.commit()
 con.close()
